@@ -24,6 +24,12 @@ WebMCP 가 꺼진 브라우저다. 같은 도구를 예비 경로로 부른다. 
 
 예비 경로는 `{ ok, result }` 또는 `{ ok: false, error }` 를 돌려준다. 사용자에게는 WebMCP 가 꺼져 있어 예비 경로를 썼다고 한 줄로 알린다.
 
+## 브라우저를 열지 못할 때
+
+`list_pages`, `new_page` 같은 Chrome DevTools MCP 도구가 오류를 내면 다른 길로 돌아가지 않는다. Node 로 `public/tools.js` 를 직접 돌리거나 서버 API 를 직접 불러 데이터를 바꾸지 않는다. 그러면 결과는 나와도 사용자가 확인하려던 경로를 거치지 않는다.
+
+오류 메시지를 그대로 사용자에게 보여 주고 멈춘다. `The browser is already running` 이면 다른 클로드 세션이 같은 Chrome 프로필을 쓰는 중이다. `.mcp.json` 의 `args` 에 `--isolated` 가 있는지 확인해 보라고 함께 알린다.
+
 ## 쓰는 요령
 
 - 상황을 물으면 `get_briefing` 부터 부른다.
