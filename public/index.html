@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>나의 개인비서</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <h1>나의 개인비서</h1>
+  <p id="webmcp-status" class="status" role="status">도구 상태 확인 중</p>
+</header>
+
+<main>
+  <section id="briefing" aria-labelledby="briefing-title">
+    <h2 id="briefing-title">오늘 브리핑</h2>
+    <p id="briefing-text">불러오는 중</p>
+  </section>
+
+  <section id="tasks" aria-labelledby="tasks-title">
+    <h2 id="tasks-title">할 일</h2>
+    <form id="task-form">
+      <label for="task-title">할 일</label>
+      <input id="task-title" name="title" required maxlength="200" autocomplete="off">
+      <label for="task-due">기한</label>
+      <input id="task-due" name="due" type="date">
+      <button type="submit">추가</button>
+    </form>
+    <ul id="task-list"></ul>
+  </section>
+
+  <section id="notes" aria-labelledby="notes-title">
+    <h2 id="notes-title">메모</h2>
+    <form id="note-form">
+      <label for="note-text">메모</label>
+      <textarea id="note-text" name="text" required maxlength="2000" rows="2"></textarea>
+      <button type="submit">남기기</button>
+    </form>
+    <ul id="note-list"></ul>
+  </section>
+
+  <section id="activity" aria-labelledby="activity-title">
+    <h2 id="activity-title">활동 기록</h2>
+    <p class="hint">사람이 한 일과 에이전트가 도구로 한 일이 여기에 쌓입니다.</p>
+    <ol id="activity-list" reversed></ol>
+  </section>
+</main>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

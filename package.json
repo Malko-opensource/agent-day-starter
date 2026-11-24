@@ -1,0 +1,15 @@
+{
+  "name": "assistant-starter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "클로드 코드가 쓰는 개인비서 웹서비스의 출발점. 앱 안에는 LLM 호출이 없다.",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test",
+    "check": "node scripts/check-env.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
