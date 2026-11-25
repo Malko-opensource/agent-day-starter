@@ -153,6 +153,11 @@ export function createApp({ dbPath = path.join(ROOT, 'data', 'db.json') } = {}) 
   }
 
   async function staticFile(res, url) {
+    // 아이콘 파일은 없다. 404 를 주면 페이지를 열 때마다 콘솔 오류로 찍히므로 빈 응답을 준다.
+    if (url.pathname === '/favicon.ico') {
+      res.writeHead(204).end();
+      return;
+    }
     const rel = url.pathname === '/' ? 'index.html' : decodeURIComponent(url.pathname.slice(1));
     const file = path.resolve(PUBLIC_DIR, rel);
     // public 폴더 밖으로 나가는 경로는 거절한다.
