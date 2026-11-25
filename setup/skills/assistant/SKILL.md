@@ -9,7 +9,7 @@ description: 내 개인비서 웹(http://localhost:4321)을 도구로 조작한�
 
 ## 순서
 
-1. 비서가 떠 있는지 확인한다. 안 떠 있으면 프로젝트 폴더에서 `node server.js` 를 백그라운드로 띄운다.
+1. 비서가 떠 있는지 확인한다. 안 떠 있으면 직접 띄우지 않는다. 사용자에게 자기 터미널 창에서 프로젝트 폴더의 `node server.js` 를 띄워 달라고 하고 멈춘다. 클로드가 띄운 서버는 세션이 끝나거나 시간이 지나면 꺼져서, 사용자가 보던 화면이 멈춘다.
 2. Chrome DevTools MCP 로 `http://localhost:4321` 페이지를 연다. 이미 열려 있으면 그 탭을 쓴다.
 3. `list_webmcp_tools` 로 도구 목록을 받는다.
 4. `execute_webmcp_tool` 로 필요한 도구를 부른다.
