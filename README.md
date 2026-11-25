@@ -2,9 +2,18 @@
 
 "에이전트와 함께하는 하루" 실습의 출발점입니다. 모두 이 폴더에서 시작해 각자의 비서로 키웁니다.
 
+## 받기
+
+```
+git clone https://github.com/Malko-opensource/agent-day-starter.git
+cd agent-day-starter
+```
+
+Node 20 이상, Chrome 150 이상, 클로드 코드가 있어야 합니다. `npm run check` 가 확인해 줍니다. 패키지 설치는 없습니다.
+
 ## 5분 안에 띄우기
 
-1. 이 폴더에서 터미널을 엽니다.
+1. 받은 폴더에서 터미널을 엽니다.
 2. `.mcp.json` 과 `.claude/skills/assistant/SKILL.md` 가 없다면 `setup/` 에서 옮깁니다.
    - `setup/mcp.json.example` → `.mcp.json`
    - `setup/skills/assistant/SKILL.md` → `.claude/skills/assistant/SKILL.md`
